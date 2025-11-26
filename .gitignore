@@ -66,3 +66,9 @@ app.*.map.json
 
 # Web
 web/.dart_tool/
+
+# # Node modules
+node_modules
+
+# Environment variables
+.env
