@@ -1,36 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'screens/login_screens/loading_screen.dart';
+import 'screens/login_screens/login_screen.dart';
+import 'screens/login_screens/login_details.dart';
+import 'screens/contact_us.dart';
+
 import 'config/colors.dart';
 import './screens/Member/home.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'LeoConnect Sri Lanka',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.background,
-        appBarTheme: AppBarTheme(backgroundColor: Colors.amberAccent),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: AppColors.navBarBackground,
-          selectedItemColor: AppColors.cardSecondaryText,
-          unselectedItemColor: AppColors.cardPrimaryText,
-
-          selectedLabelStyle: TextStyle(fontSize: 12),
-          unselectedLabelStyle: TextStyle(fontSize: 12),
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFFFFD700),
+          brightness: Brightness.dark,
         ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const LoadingScreen(),
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/login-details': (context) => const LoginDetails(),
+        '/contact_us': (context) => const ContactUs(),
+      },
     );
   }
 }
 
+// Keeping the original HomePage for future use
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
