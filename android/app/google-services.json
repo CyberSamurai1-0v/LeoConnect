@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "348825488560",
+    "project_id": "leoconnect-6a3c0",
+    "storage_bucket": "leoconnect-6a3c0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348825488560:android:9b75403151a65393e2ff75",
+        "android_client_info": {
+          "package_name": "com.example.leoconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348825488560-jhsc1bvcnmve0ngtb98m18ugqbjdmmtj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.leoconnect",
+            "certificate_hash": "99e4edd928be3263ed333108dfd466ee576017fc"
+          }
+        },
+        {
+          "client_id": "348825488560-27c9apblrsltapaj0sdjost1h7ir6j63.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYDTAln0dGUOKtPaMM8D4H2Q8LNtKUOec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348825488560-27c9apblrsltapaj0sdjost1h7ir6j63.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "348825488560-1lf0klq8auklv5f2vebb6a44t6t60r8m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.leoconnect"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
